@@ -1,22 +1,106 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-  <title>M5h7 Main Page</title>
+	<title>M5hm0ud7</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-color: #202020;
+		}
+
+		.container {
+			width: 100%;
+			height: 80px;
+			background-color: #202020;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.container h1 {
+			color: #007ACC;
+			font-size: 30px;
+			font-weight: normal;
+			margin: 0;
+			padding: 0;
+			border-radius: 20px;
+			background-color: #FFF;
+			padding: 10px 20px;
+		}
+
+		.tab {
+			background-color: #007ACC;
+			color: #fff;
+			display: inline-block;
+			padding: 10px 20px;
+			border-radius: 20px 20px 0 0;
+			margin-right: 5px;
+			cursor: pointer;
+		}
+
+		.tab.active {
+			background-color: #202020;
+		}
+
+		.tab-content {
+			display: none;
+			background-color: #FFF;
+			padding: 20px;
+			border-radius: 0 0 20px 20px;
+		}
+
+		.tab-content.active {
+			display: block;
+		}
+	</style>
 </head>
-  <body>
-    <body background="Background.jpg"
-    <center>M5hm0ud7</center> <br>
-    Welcome To The Main M5hm0ud7 Page! Feel Free To Explore!
-    
-    
-    
-    <button>About Me</button>
-   
-  </body>
-      
-  
-  
-  
-  
-  
+<body>
+	<body background="Background.jpg">
+	<div class="container">
+		<h1>M5hm0ud7</h1>
+	</div>
+
+	<div class="tab-container">
+		<div class="tab active" onclick="openTab(event, 'about-me')">About me</div>
+		<div class="tab" onclick="openTab(event, 'my-code')">My Code</div>
+		<div class="tab" onclick="openTab(event, 'social-media')">Social Media</div>
+		<div class="tab" onclick="openTab(event, 'github-page')">Github Page</div>
+	</div>
+
+	<div id="about-me" class="tab-content active">
+		<p>I'm A Programmer/Student, I Work On Alot Of Stuff, Mainly Programs/Apps, These Apps Are Mainly For Hacking And Are In A .ipa file format, you can download them using altstore Or Trollstore If you're Jailbroken! If your interested in getting some apps, Go To The "My Code" Tab Or The "Github Page" Tab, If You Want To Contact Me, I'll Have My Discord Below Soon!</p>
+	</div>
+
+	<div id="my-code" class="tab-content">
+		<p>Hello! Welcome To My Code, The Apps That Are Public Will Be Listed Below!</p>
+	</div>
+
+	<div id="social-media" class="tab-content">
+		<p>Hello! Welcome To My Social Media Tab, Go Ahead And Drop Me A Follow!</p>
+		<p>Instagram: https://www.instagram.com/m5hm0ud7/</p>
+	</div>
+
+	<div id="github-page" class="tab-content">
+		<p>Hello! Welcome To My Github Page Github Link Is Below!</p>
+		<p>https://github.com/M5hm0ud7</p>
+	</div>
+
+	<script>
+		function openTab(evt, tabName) {
+			var i, tabContent, tabLinks;
+			tabContent = document.getElementsByClassName("tab-content");
+			for (i = 0; i < tabContent.length; i++) {
+				tabContent[i].style.display = "none";
+			}
+			tabLinks = document.getElementsByClassName("tab");
+			for (i = 0; i < tabLinks.length; i++) {
+				tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+			}
+			document.getElementById(tabName).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+	</script>
+</body>
 </html>
